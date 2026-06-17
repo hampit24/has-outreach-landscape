@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAS Outreach & Support Landscape</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; font-size: 12px; background: #F9FAFB; color: #111827; padding: 24px; max-width: 1200px; margin: 0 auto; }
+
+  .page-header { margin-bottom: 20px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .meta { font-size: 11px; color: #6B7280; margin-bottom: 8px; }
+  .description { font-size: 12px; color: #4B5563; line-height: 1.6; max-width: 700px; }
+
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+  .map-block { border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+  .map-support { background: #FFF7ED; border: 1.5px solid #FED7AA; }
+  .map-outreach { background: #F0F9FF; border: 1.5px solid #BAE6FD; }
+  .map-title { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+  .map-desc { font-size: 11px; color: #6B7280; margin-bottom: 12px; }
+  .map-support .map-title { color: #C2410C; }
+  .map-outreach .map-title { color: #0369A1; }
+
+  .aud-label { font-size: 9px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+  .aud-patient { background: #E0F2FE; color: #0369A1; }
+  .aud-admin { background: #EDE9FE; color: #6D28D9; }
+
+  .cards { display: grid; gap: 8px; margin-bottom: 10px; }
+  .cards-2 { grid-template-columns: 1fr 1fr; }
+  .cards-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .cards-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+  .card { background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 11px 13px; }
+  .card-header { display: flex; align-items: center; gap: 5px; margin-bottom: 7px; flex-wrap: wrap; }
+  .card-title { font-size: 11px; font-weight: 700; }
+  .tag { font-size: 9px; font-weight: 700; letter-spacing: 0.03em; padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
+  .tag-sms { background: #FEF3C7; color: #92400E; }
+  .tag-email { background: #FFE4E6; color: #9F1239; }
+  .tag-inapp { background: #DBEAFE; color: #1D4ED8; }
+  .tag-formsg { background: #D1FAE5; color: #065F46; }
+  .tag-askgov { background: #EDE9FE; color: #6D28D9; }
+
+  .label { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 2px; }
+  .value { font-size: 10.5px; color: #374151; line-height: 1.45; }
+  .mono { font-family: monospace; font-size: 10px; color: #6B7280; }
+  hr.div { border: none; border-top: 1px solid #E5E7EB; margin: 6px 0; }
+
+  .gap-card { background: #F9FAFB; border: 1px dashed #D1D5DB; border-radius: 8px; padding: 11px 13px; }
+  .gap-card .card-title { color: #9CA3AF; }
+  .gap-value { font-size: 10.5px; color: #9CA3AF; font-style: italic; line-height: 1.45; }
+
+  .gap-note { background: #FEF2F2; border: 1px solid #FECACA; border-radius: 6px; padding: 9px 13px; font-size: 10.5px; color: #991B1B; margin-top: 8px; }
+  .gap-note strong { font-weight: 700; }
+
+  .footer { background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 10px 14px; font-size: 10.5px; color: #6B7280; margin-top: 4px; }
+  .footer strong { color: #111827; }
+
+  @media (max-width: 900px) {
+    .cards-3, .cards-4 { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .cards-2, .cards-3, .cards-4 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>HAS Outreach & Support Landscape</h1>
+  <div class="meta">Last updated: June 2026 · Health Appointment System · Open Government Products</div>
+  <div class="description">
+    A map of all channels through which HAS communicates with patients and clinic admins —
+    split into <strong>Support Channels</strong> (how users reach HAS or give feedback) and
+    <strong>Outreach Campaigns</strong> (how HAS proactively reaches users).
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="dot" style="background:#FEF3C7;border:1px solid #F59E0B"></div><span style="color:#92400E">SMS</span></div>
+    <div class="legend-item"><div class="dot" style="background:#FFE4E6;border:1px solid #F43F5E"></div><span style="color:#9F1239">Email</span></div>
+    <div class="legend-item"><div class="dot" style="background:#DBEAFE;border:1px solid #3B82F6"></div><span style="color:#1D4ED8">In-App</span></div>
+    <div class="legend-item"><div class="dot" style="background:#D1FAE5;border:1px solid #10B981"></div><span style="color:#065F46">FormSG</span></div>
+    <div class="legend-item"><div class="dot" style="background:#EDE9FE;border:1px solid #8B5CF6"></div><span style="color:#6D28D9">AskGov</span></div>
+  </div>
+</div>
+
+<!-- ══ SUPPORT CHANNELS ══ -->
+<div class="map-block map-support">
+  <div class="map-title">🙋 Support Channels — How users reach HAS</div>
+  <div class="map-desc">Channels where users initiate contact or HAS prompts users for structured feedback</div>
+
+  <div><span class="aud-label aud-patient">👤 Patients</span></div>
+  <div class="cards cards-3" style="margin-bottom:10px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-askgov">AskGov</span><span class="card-title">Self-Service FAQ</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Patient searches a question. Browses pre-written Q&As. Thumbs up/down per answer. If unsatisfied → directed to support form.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">👍 / 👎 per article (1,399 articles · 1,017 👍 · 505 👎)</div>
+      <hr class="div">
+      <div class="label">URL</div>
+      <div class="mono">ask.gov.sg/has</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-formsg">FormSG</span><span class="card-title">HAS Support Form</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Patient submits a support request. Reached via AskGov fallback, error screens, or phone # conflict errors.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">Free-form support query / complaint</div>
+      <hr class="div">
+      <div class="label">URL</div>
+      <div class="mono">go.gov.sg/has-support</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-formsg">FormSG</span><span class="card-title">Error Reporting Form</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Surfaced on crash/error screens. Stack trace and Datadog session ID auto pre-filled.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">Stack trace · Datadog session ID · user description</div>
+      <hr class="div">
+      <div class="label">FormSG ID</div>
+      <div class="mono">67cfd63a0808b034a481aee1</div>
+    </div>
+  </div>
+
+  <div class="cards cards-3" style="margin-bottom:12px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-inapp">In-App</span><span class="card-title">Post-Booking NPS</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Card shown on booking confirmation page. HAS-prompted, one-time per appointment.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">5-star NPS · reason checkboxes (liked/disliked) · optional comment</div>
+      <hr class="div">
+      <div class="label">Storage</div>
+      <div class="mono" style="font-style:italic;color:#9CA3AF">Native HAS DB</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-inapp">In-App</span><span class="card-title">Queue Surveys</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Two moments: (1) while waiting in queue, (2) on exit from queue. Auto-saves as patient types.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">5-star rating · exit reasons (wait too long / other clinic / other) · optional comment</div>
+      <hr class="div">
+      <div class="label">Storage</div>
+      <div class="mono" style="font-style:italic;color:#9CA3AF">Native HAS DB</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-formsg">FormSG</span><span class="card-title">Design Feedback Form</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Passive opt-in link. Translation strings exist in code but banner not currently rendered in-app.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">Qualitative feedback on new HAS UI design · 4 languages (EN/MS/ZH/TA)</div>
+      <hr class="div">
+      <div class="label">URL</div>
+      <div class="mono">go.gov.sg/has-feedback-form(-ms/-zh/-ta)</div>
+    </div>
+  </div>
+
+  <div><span class="aud-label aud-admin">🏥 Clinic Admins</span></div>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-inapp">In-App</span><span class="card-title">Admin Satisfaction Survey</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Slide popup prompted by HAS. Appears on 1st Wednesday of each month. Up to 2 dismissals before it stops for the month.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">5-point emoji satisfaction rating · optional free-text comment</div>
+      <hr class="div">
+      <div class="label">Storage</div>
+      <div class="mono" style="font-style:italic;color:#9CA3AF">Native HAS DB — keyed by adminUserId + institutionId</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-askgov">AskGov</span><span class="card-title">AskGov — For Service Providers</span></div>
+      <div class="label">How it works</div>
+      <div class="value">Clinic staff browse FAQs on billing, CHAS fees, NAIS rules, consultation charges. Thumbs up/down per answer.</div>
+      <hr class="div">
+      <div class="label">What we collect</div>
+      <div class="value">👍 / 👎 per article (21 articles · +17 / -4)</div>
+      <hr class="div">
+      <div class="label">URL</div>
+      <div class="mono">ask.gov.sg/has → For Service Providers topic</div>
+    </div>
+  </div>
+
+  <div class="gap-note">
+    <strong>Notable gap:</strong> No post-appointment feedback channel for patients — once an appointment is completed, there is no SMS, email, or in-app prompt asking "how was your visit?"
+  </div>
+</div>
+
+<!-- ══ OUTREACH ══ -->
+<div class="map-block map-outreach">
+  <div class="map-title">📣 Outreach Campaigns — How HAS reaches users</div>
+  <div class="map-desc">Proactive communications HAS sends out — transactional, operational, and campaign-driven</div>
+
+  <div><span class="aud-label aud-patient">👤 Patients — Transactional</span></div>
+  <div class="cards cards-4" style="margin-bottom:10px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Booking Confirmation</span></div>
+      <div class="label">Trigger</div><div class="value">Immediately on booking or reschedule</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Date, time, clinic, offering · reschedule link</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Reminders ×2</span></div>
+      <div class="label">Trigger</div><div class="value">Days before · day before appointment</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Appointment details + reschedule link</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Cancellation / Reschedule</span></div>
+      <div class="label">Trigger</div><div class="value">On any cancellation or change event</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Old/new details · reason for change</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">No-Show Follow-Up</span></div>
+      <div class="label">Trigger</div><div class="value">~24h after missed appointment</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Friendly reminder + rebooking link</div>
+    </div>
+  </div>
+
+  <div><span class="aud-label aud-patient">👤 Patients — Queue / Visit</span></div>
+  <div class="cards cards-4" style="margin-bottom:10px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Queue Check-In</span></div>
+      <div class="label">Trigger</div><div class="value">When patient joins the virtual queue</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Queue position · visit link</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Queue Position Update</span></div>
+      <div class="label">Trigger</div><div class="value">When queue moves significantly</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Updated position number</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Queue Due Soon</span></div>
+      <div class="label">Trigger</div><div class="value">When patient is near the front</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Please return to clinic now</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Queue Standby</span></div>
+      <div class="label">Trigger</div><div class="value">Standby state in queue</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">On-standby notice · stay nearby</div>
+    </div>
+  </div>
+
+  <div><span class="aud-label aud-patient">👤 Patients — Vaccine Campaigns</span></div>
+  <div class="cards cards-3" style="margin-bottom:10px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Flu Campaign</span></div>
+      <div class="label">Trigger</div><div class="value">Automated · seasonal · eligible patients</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Annual flu jab invite · go.gov.sg/influenza · 4 languages</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">Pneumococcal Campaign</span></div>
+      <div class="label">Trigger</div><div class="value">Automated · 5 variants (no dose / first dose done)</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">PCV/PPSV invite · go.gov.sg/pneumococcal · 4 languages</div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">HPV Campaign</span></div>
+      <div class="label">Trigger</div><div class="value">Automated · birthday month · up to 5 variants · before age 27</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Birthday hook · go.gov.sg/hpv-vaccine</div>
+    </div>
+  </div>
+
+  <div><span class="aud-label aud-patient">👤 Patients — Health Nudges</span></div>
+  <div class="cards cards-2" style="margin-bottom:10px">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-sms">SMS</span><span class="card-title">DRP/DFS Nudge (Diabetic Screening)</span></div>
+      <div class="label">Trigger</div><div class="value">Scheduled · Healthier SG patients overdue for annual diabetic eye/foot screening</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Screening reminder · clinic name + contact number to call directly</div>
+    </div>
+    <div class="gap-card">
+      <div class="card-header"><span class="card-title">❌ Post-Appointment Feedback SMS</span></div>
+      <div class="gap-value">Does not exist. Once an appointment is completed, HAS sends nothing to the patient. Gap if we want post-visit sentiment data via SMS.</div>
+    </div>
+  </div>
+
+  <div><span class="aud-label aud-admin">🏥 Clinic Admins</span></div>
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-header"><span class="tag tag-email">Email</span><span class="card-title">Appointment Alerts</span></div>
+      <div class="label">Trigger</div><div class="value">On patient booking / cancellation / reschedule</div>
+      <hr class="div">
+      <div class="label">Content</div><div class="value">Masked patient UIN · appointment details · HAS admin link · stock reminder for vaccine appts</div>
+    </div>
+    <div class="gap-card">
+      <div class="card-header"><span class="card-title">❌ No Proactive Admin Campaigns</span></div>
+      <div class="gap-value">Admins only receive transactional emails triggered by patient actions. No onboarding nudges, feature announcements, or operational tips sent proactively.</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>📤 Automated Feedback Digest:</strong> Weekly Lambda job collects all in-app feedback with comments ≥30 chars (admin + appointment + visit surveys) and posts a digest to Slack for the team to review.
+</div>
+
+</body>
+</html>
